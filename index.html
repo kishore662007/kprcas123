@@ -1,82 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KPRCAS Login</title>
+  <meta charset="UTF-8">
+  <title>KPRCAS Search Box</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #1e4fa1, #2fa36b);
-      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f8ff;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
-
-    .login-box {
-      background: #ffffff;
-      width: 350px;
+    .search-container {
+      background: #fff;
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
       text-align: center;
+      width: 400px;
     }
-
-    .login-box img {
-      width: 140px;
+    .search-container img {
+      width: 100px;
       margin-bottom: 10px;
     }
-
-    .login-box h2 {
-      margin: 10px 0 20px;
-      color: #1e4fa1;
-    }
-
-    .login-box input {
-      width: 100%;
-      padding: 10px;
+    .search-container h2 {
       margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
+      color: #0073e6;
     }
-
-    .login-box button {
-      width: 100%;
+    .search-container p {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      gap: 10px;
+    }
+    input[type="text"] {
+      flex: 1;
       padding: 10px;
-      background: #1e4fa1;
-      color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 16px;
+      background: #0073e6;
+      color: white;
       border: none;
-      border-radius: 6px;
-      font-size: 16px;
+      border-radius: 5px;
       cursor: pointer;
-      margin-top: 10px;
     }
-
-    .login-box button:hover {
-      background: #163d7a;
-    }
-
-    .login-box .footer-text {
-      margin-top: 15px;
-      font-size: 13px;
-      color: #555;
+    button:hover {
+      background: #005bb5;
     }
   </style>
 </head>
 <body>
-  <div class="login-box">
-    <!-- Replace kprcas.jpg with your logo file name -->
-    <img src="kprcas.jpg" alt="KPRCAS Logo" />
-    <h2>Login</h2>
-    <form>
-      <input type="text" placeholder="Username" required />
-      <input type="password" placeholder="Password" required />
-      <button type="submit">Sign In</button>
+  <div class="search-container">
+    <!-- Replace with your logo file path -->
+    <img src="kprcas-logo.jpeg" alt="KPRCAS Logo">
+    <h2>KPRCAS</h2>
+    <p>LEARN BEYOND</p>
+
+    <!-- Formspree integration -->
+    <form action="https://formspree.io/f/xjkndvgv" method="POST">
+      <input type="text" name="query" placeholder="Enter your search..." required>
+      <button type="submit">Search</button>
     </form>
-    <div class="footer-text">Learn Beyond</div>
   </div>
 </body>
 </html>
+
